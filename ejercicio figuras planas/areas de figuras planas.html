@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas de Figuras Planas - Ignacio</title>
+</head>
+<body>
+    <h1>Áreas de Figuras Planas</h1>
+
+    <h2 id="indice">Índice</h2>
+    <ul>
+        <li><a href="#rectangulo">Rectángulo</a></li>
+        <li><a href="#triangulo">Triángulo</a></li>
+        <li><a href="#rombo">Rombo</a></li>
+        <li><a href="#cuadrado">Cuadrado</a></li>
+        <li><a href="#paralelogramo">Paralelogramo</a></li>
+        <li><a href="#trapecio">Trapecio</a></li>
+        <li><a href="#romboide">Romboide</a></li>
+        <li><a href="#poligono">Polígono regular</a></li>
+        <li><a href="#circulo">Círculo</a></li>
+    </ul>
+  
+    <section id="rectangulo">
+        <h3>Rectángulo</h3>
+        <img src="Imágenes/1.jfif" alt="figura de un rectángulo"><br>
+        Base: <input type="number" id="baseRect">
+        Altura: <input type="number" id="alturaRect">
+        <button onclick="areaRect()">Calcular</button>
+        <p id="resRect"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="triangulo">
+        <h3>Triángulo</h3>
+        <img src="Imágenes/2.jfif" alt="imagen de un triángulo"><br>
+        Base: <input type="number" id="baseTri">
+        Altura: <input type="number" id="alturaTri">
+        <button onclick="areaTri()">Calcular</button>
+        <p id="resTri"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="rombo">
+        <h3>Rombo</h3>
+        <img src="Imágenes/3.jfif" alt="imagen de un rombo"><br>
+        Diagonal mayor: <input type="number" id="baseRom">
+        Diagonal menor: <input type="number" id="alturaRom">
+        <button onclick="areaRom()">Calcular</button>
+        <p id="resRom"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="cuadrado">
+        <h3>Cuadrado</h3>
+        <img src="Imágenes/4.jfif" alt="imagen de un cuadrado"><br>
+        Lado: <input type="number" id="baseCua">
+        <button onclick="areaCua()">Calcular</button>
+        <p id="resCua"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="paralelogramo">
+        <h3>Paralelogramo</h3>
+        <img src="Imágenes/5.jfif" alt="imagen de un paralelogramo"><br>
+        Base: <input type="number" id="basePar">
+        Altura: <input type="number" id="alturaPar">
+        <button onclick="areaPar()">Calcular</button>
+        <p id="resPar"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="trapecio">
+        <h3>Trapecio</h3>
+        <img src="Imágenes/6.jfif" alt="imagen de un trapecio"><br>
+        Altura: <input type="number" id="alturaTra">
+        <button onclick="areaTra()">Calcular</button>
+        <p id="resTra"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="romboide">
+        <h3>Romboide</h3>
+        <img src="Imágenes/7.jfif" alt="imagen de un romboide"><br>
+        Base: <input type="number" id="baseRomb">
+        Altura: <input type="number" id="alturaRomb">
+        <button onclick="areaRomb()">Calcular</button>
+        <p id="resRomb"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="poligono">
+        <h3>Polígono regular</h3>
+        <img src="Imágenes/8.jfif" alt="imagen de un polígono regular"><br>
+        <button onclick="areaPol()">Calcular</button>
+        <p id="resPol"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <section id="circulo">
+        <h3>Círculo</h3>
+        <img src="Imágenes/9.jfif" alt="imagen de un círculo"><br>
+        <button onclick="areaCir()">Calcular</button>
+        <p id="resCir"></p>
+        <a href="#indice">Volver al índice</a>
+    </section>
+
+    <script>
+        
+        function areaRect() {
+            var base = Number(document.getElementById("baseRect").value);
+            var altura = Number(document.getElementById("alturaRect").value);
+            document.getElementById("resRect").innerText = "Área: " + (base * altura);
+        }
+
+        
+        function areaTri() {
+            var base = Number(document.getElementById("baseTri").value);
+            var altura = Number(document.getElementById("alturaTri").value);
+            document.getElementById("resTri").innerText = "Área: " + (base * altura / 2);
+        }
+
+        
+        function areaRom() {
+            var D = Number(document.getElementById("baseRom").value);
+            var d = Number(document.getElementById("alturaRom").value);
+            document.getElementById("resRom").innerText = "Área: " + (D * d / 2);
+        }
+
+        
+        function areaCua() {
+            var lado = Number(document.getElementById("baseCua").value);
+            document.getElementById("resCua").innerText = "Área: " + (lado * lado);
+        }
+
+        
+        function areaPar() {
+            var base = Number(document.getElementById("basePar").value);
+            var altura = Number(document.getElementById("alturaPar").value);
+            document.getElementById("resPar").innerText = "Área: " + (base * altura);
+        }
+
+        
+        function areaTra() {
+            var B = Number(prompt("Ingresa la base mayor:"));
+            var b = Number(prompt("Ingresa la base menor:"));
+            var h = Number(document.getElementById("alturaTra").value);
+            var area = ((B + b) * h) / 2;
+            document.getElementById("resTra").innerText = "Área: " + area;
+        }
+
+       
+        function areaRomb() {
+            var base = Number(document.getElementById("baseRomb").value);
+            var altura = Number(document.getElementById("alturaRomb").value);
+            document.getElementById("resRomb").innerText = "Área: " + (base * altura);
+        }
+
+        
+        function areaPol() {
+            var perimetro = Number(prompt("Ingresa el perímetro:"));
+            var apotema = Number(prompt("Ingresa el apotema:"));
+            var area = (perimetro * apotema) / 2;
+            document.getElementById("resPol").innerText = "Área: " + area;
+        }
+
+        
+        function areaCir() {
+            var radio = Number(prompt("Ingresa el radio:"));
+            var area = Math.PI * radio * radio;
+            document.getElementById("resCir").innerText = "Área: " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>
